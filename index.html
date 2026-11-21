@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>John Rowen Miano | Statistics and Remote Sensing</title>
+<meta name="description" content="Statistics student at Cebu Technological University working on satellite data, spatial statistics, and research communication.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --light:#f8f9fa; --navy:#1e354a;
+  --bg:var(--light); --ink:var(--navy); --card:#fff;
+  --muted:#52677a; --line:#d5dbe1; --bar:var(--navy); --bar-ink:var(--light);
+  --serif:Marcellus,Georgia,serif; --sans:Poppins,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:var(--navy);--ink:var(--light);--card:#25415a;--muted:#aebdca;--line:#37506a;--bar:#162b3d}
+}
+:root[data-theme="dark"]{--bg:var(--navy);--ink:var(--light);--card:#25415a;--muted:#aebdca;--line:#37506a;--bar:#162b3d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--sans)}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+/* Top bar */
+.bar{position:sticky;top:0;z-index:5;background:var(--bar);color:var(--bar-ink)}
+.bar .in{max-width:70rem;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;gap:1.25rem;min-height:3.25rem;flex-wrap:wrap}
+.bar a{text-decoration:none;font-size:.95rem;opacity:.85}
+.bar a:hover,.bar a.on{opacity:1;text-decoration:underline}
+.bar .brand{font:400 1.15rem var(--serif);opacity:1;margin-right:auto}
+.bar nav{display:flex;gap:1.1rem;flex-wrap:wrap}
+#theme{background:none;border:1px solid #ffffff66;color:inherit;border-radius:2rem;padding:.15rem .7rem;font:inherit;font-size:.82rem;cursor:pointer}
+
+/* Layout: sidebar + content */
+.page{max-width:70rem;margin:0 auto;padding:2.5rem 1.5rem 3rem;display:grid;grid-template-columns:15rem minmax(0,1fr);gap:3.5rem}
+@media(max-width:52rem){.page{grid-template-columns:1fr;gap:2rem}}
+
+.side{position:sticky;top:5.25rem;align-self:start;font-size:.97rem}
+@media(max-width:52rem){.side{position:static}}
+.photo{width:11rem;height:11rem;border-radius:50%;background:var(--navy);color:var(--light);display:grid;place-items:center;font:400 3rem var(--serif);overflow:hidden;border:3px solid var(--ink)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.side h1{font:400 1.5rem/1.2 var(--serif);margin:1.1rem 0 .15rem}
+.side .role{margin:0 0 1rem;color:var(--muted)}
+.side ul{list-style:none;margin:0;padding:0}
+.side li{padding:.28rem 0}
+.side details{margin-top:.5rem}
+.side summary{cursor:pointer;font-weight:600;list-style:none;border:1px solid var(--ink);border-radius:.35rem;padding:.3rem .8rem;display:inline-block}
+.side details ul{margin-top:.6rem}
+
+/* Content */
+main section{padding-bottom:2.75rem}
+main h2{font:400 2rem/1.2 var(--serif);margin:0 0 1rem;padding-bottom:.4rem;border-bottom:2px solid var(--ink)}
+main p{max-width:44rem;margin:.6rem 0}
+.meta{color:var(--muted);font-size:.93rem}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:1.25rem;margin-top:1.25rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:.4rem;overflow:hidden;display:flex;flex-direction:column}
+/* Figure area: swap the background for <img> when you have a figure */
+.fig{height:7.5rem;background:var(--navy) radial-gradient(circle,#f8f9fa55 1px,transparent 1.5px) 0 0/14px 14px;display:flex;align-items:flex-end;padding:.6rem .8rem;color:#f8f9fa;font-size:.8rem}
+.card .body{padding:1rem 1rem 1.15rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
+.card h3{font:600 1.05rem/1.35 var(--sans);margin:0}
+.card p{margin:0;font-size:.96rem;line-height:1.55}
+.card a.more{margin-top:auto;padding-top:.5rem;font-weight:500}
+
+.list{list-style:none;margin:0;padding:0}
+.list>li{padding:.95rem 0;border-bottom:1px solid var(--line);max-width:48rem}
+.list>li:last-child{border-bottom:0}
+.list b{font-weight:600}
+.list ul{margin:.45rem 0 0;padding-left:1.1rem}
+.list ul li{margin:.2rem 0}
+.two{columns:2;column-gap:2.5rem;max-width:none!important}
+.two>li{break-inside:avoid}
+@media(max-width:44rem){.two{columns:1}}
+details.more-awards{margin-top:1rem;max-width:44rem}
+details.more-awards summary{cursor:pointer;font-weight:600}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;padding:1.5rem 0;text-align:center}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="in">
+  <a class="brand" href="#top">John Rowen Miano</a>
+  <nav>
+    <a href="#research">Research</a><a href="#publications">Publications</a><a href="#talks">Talks</a>
+    <a href="#experience">Experience</a><a href="#awards">Awards</a><a href="#contact">Contact</a>
+  </nav>
+  <button id="theme" type="button" aria-label="Toggle light and dark theme">Theme</button>
+</div></div>
+
+<div class="page" id="top">
+
+  <aside class="side">
+    <!-- Replace the initials with your photo: <div class="photo"><img src="profile.jpg" alt="John Rowen Miano"></div> -->
+    <div class="photo" aria-hidden="true">JM</div>
+    <h1>John Rowen Miano</h1>
+    <p class="role">BS Statistics student<br>Cebu Technological University<br>DOST-SEI scholar</p>
+    <details open>
+      <summary>Follow</summary>
+      <ul>
+        <li>Cebu, Philippines</li>
+        <li><a href="mailto:johnrowenmiano@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/johnrowenmiano/">LinkedIn</a></li>
+        <li><a href="https://orcid.org/0009-0004-3261-9622">ORCID</a></li>
+        <li><a href="https://scholar.google.com/citations?hl=en&amp;user=CHmxeecAAAAJ">Google Scholar</a></li>
+        <li><a href="https://www.scopus.com/authid/detail.uri?authorId=59959245400">Scopus</a></li>
+        <li><a href="https://doi.org/10.1016/j.landusepol.2025.107673">Latest paper</a></li>
+      </ul>
+    </details>
+  </aside>
+
+  <main>
+
+  <section id="about">
+    <h2>Reading cities from the night sky</h2>
+    <p>Hello! I’m a third-year statistics student at Cebu Technological University and a DOST-SEI scholar. I use satellite imagery and spatial statistics to study how cities and landscapes change, and I lead student programs that make research easier to start.</p>
+    <p>My current work is a funded study of Metro Cebu that combines VIIRS night lights with Sentinel-2 imagery to map urban land use at 10-meter resolution. Past projects cover land use in conflict zones, water quality in Laguna de Bay, and disaster communication among Gen Z youth.</p>
+    <p>I also direct Sapereus, serve as a Notion Campus Leader, and was president of the Future Science and Technology Leaders of the Philippines until July 2026.</p>
+  </section>
+
+  <section id="research">
+    <h2>Featured research</h2>
+    <p class="meta">Add a figure to any card by replacing its dotted panel with an image.</p>
+    <div class="cards">
+      <article class="card"><div class="fig">VIIRS + Sentinel-2</div><div class="body">
+        <h3>Mapping the Nocturnal City</h3>
+        <p>As principal investigator of a WTA Labs grant, I’m detecting BPO clusters and measuring commute inequality in Metro Cebu, then checking the results with the community.</p>
+      </div></article>
+      <article class="card"><div class="fig">Earth observation</div><div class="body">
+        <h3>Land Use in Armed-Conflict Hotspots</h3>
+        <p>We tracked land use change across North-East Nigeria with satellite data and published the findings in Land Use Policy.</p>
+        <a class="more" href="https://doi.org/10.1016/j.landusepol.2025.107673">Read the paper</a>
+      </div></article>
+      <article class="card"><div class="fig">Gaussian processes</div><div class="body">
+        <h3>Chlorophyll-a in Laguna de Bay</h3>
+        <p>I used Gaussian process regression to fill gaps in satellite chlorophyll-a data over space and time, with uncertainty estimates for each value.</p>
+      </div></article>
+      <article class="card"><div class="fig">Measurement</div><div class="body">
+        <h3>SDG Alignment Assessment Instrument</h3>
+        <p>I developed and content-validated a tool that shows how well student projects line up with the Sustainable Development Goals.</p>
+      </div></article>
+      <article class="card"><div class="fig">Delphi method</div><div class="body">
+        <h3>Disaster Communication Among Gen Z</h3>
+        <p>I designed a Delphi study to find which channels and criteria young people rely on during disasters.</p>
+      </div></article>
+      <article class="card"><div class="fig">Statistical theory</div><div class="body">
+        <h3>Geeta Distribution for Word Frequencies</h3>
+        <p>This study looks at when the Geeta distribution’s parameters can be recovered reliably from word frequency data.</p>
+      </div></article>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications and grants</h2>
+    <ul class="list">
+      <li><b>Revealing Land Use Dynamics in Armed-Conflict Hotspots in North-East Nigeria Using Earth Observation Data</b><br>
+        <span class="meta">Land Use Policy Journal, June 2025 · <a href="https://doi.org/10.1016/j.landusepol.2025.107673">doi.org/10.1016/j.landusepol.2025.107673</a></span></li>
+      <li><b>Research Grants Program 2026, WTA Labs: Center for Urban Research</b><br>
+        <span class="meta">Principal Investigator · Mapping the Nocturnal City: BPO Cluster Detection and Commute Inequality in Metro Cebu using Satellite Data and Community Validation</span></li>
+    </ul>
+  </section>
+
+  <section id="talks">
+    <h2>Talks and posters</h2>
+    <ul class="list">
+      <li><b>Gaussian Process Regression for Reconstructing Satellite-Derived Chlorophyll-a in Laguna de Bay</b><br><span class="meta">Poster · 6th International Electronic Conference on Remote Sensing</span></li>
+      <li><b>On the Likelihood and Identifiability of the Geeta Distribution</b><br><span class="meta">Poster · 2nd Student Research Colloquium on the Statistical Sciences, UP Cebu</span></li>
+      <li><b>Development and Content Validation of the SDG Alignment Assessment Instrument</b><br><span class="meta">Keynote · 14th CAS Research Congress and 1st SDG Colloquium, CTU</span></li>
+      <li><b>Introduction to Choice-Based Conjoint Analysis</b><br><span class="meta">Workshop · Center for Applied Mathematics and Operations Research</span></li>
+      <li><b>SDGs and Data Journalism: How to Effectively Report Impact</b><br><span class="meta">36th National Statistics Month Celebration, CTU</span></li>
+      <li><b>Introduction to Remote Sensing with Google Earth Engine</b><br><span class="meta">STEM Learning Bootcamp 2025, Mactan National High School</span></li>
+      <li><b>Notion for SDGs</b> and <b>Chapter 1, Done Right</b><br><span class="meta">SDiGify workshop and Training Seminar on Research Alignment, CTU</span></li>
+      <li><b>Land use dynamics in North-East Nigeria</b><br><span class="meta">Lecture and poster · AghamHayag Colloquium, CTU; 1st Student Research Colloquium, UP Cebu</span></li>
+      <li><b>In silico Analysis of <i>Euphorbia tirucalli</i> Phytochemicals against the <i>Xanthomonas oryzae</i> Ddl Enzyme</b><br><span class="meta">Podium and poster · CebuTech Research Congress 2024</span></li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul class="list">
+      <li><b>Principal Investigator / Research Grantee</b>, WTA Labs: Center for Urban Research<br><span class="meta">Sep 2026 – present</span>
+        <ul><li>Building a VIIRS-Sentinel-2 fusion model for nocturnal urban land use classification across Metro Cebu.</li></ul></li>
+      <li><b>Deputy Chief Events Officer for Programs</b>, START, DOST<br><span class="meta">Aug 2026 – present</span>
+        <ul><li>Leading research on a priority-tiering instrument for program planning.</li>
+        <li>Started START AHEAD, connecting 200+ techno-scholars with the ASEAN AHEAD Program and an AI Career Readiness Course.</li></ul></li>
+      <li><b>Research Intern</b>, CAMOR<br><span class="meta">Jul – Aug 2026</span>
+        <ul><li>Ran a Delphi study on disaster communication among Gen Z youth.</li>
+        <li>Taught a Conjoint Analysis workshop to 8 master’s students and center members.</li></ul></li>
+      <li><b>Research Intern</b>, CAS Research and Development Office, CTU<br><span class="meta">Jun – Aug 2026</span>
+        <ul><li>Wrote the grant proposal accepted by WTA Labs from a competitive national pool.</li></ul></li>
+      <li><b>Campus Leader</b>, Notion Campus Leader Program<br><span class="meta">Oct 2025 – present</span>
+        <ul><li>Trained 13 student teams across 6 colleges to build SDG dashboards as Notion micro sites.</li>
+        <li>Taught a Notion research workflow to 30 thesis students and led sessions for 160+ participants.</li></ul></li>
+      <li><b>Director</b>, Sapereus<br><span class="meta">Dec 2024 – present</span>
+        <ul><li>Named a PH100 Brightest Mind Under 30 (2025) by StellarPH.</li>
+        <li>Led the team behind CertifAI, a Top 6 finalist at the BPI DATA Wave Hackathon 2025.</li>
+        <li>Advised 5+ STEM research teams and taught Google Earth Engine to 50+ senior high students.</li></ul></li>
+      <li><b>President</b>, Future Science and Technology Leaders of the Philippines<br><span class="meta">Sep 2024 – Jul 2026</span>
+        <ul><li>Directed 50+ student leaders and organized 9+ events that reached 700+ people.</li>
+        <li>Planted 100+ mangrove propagules in Inoburan, Naga, Cebu with Move2Change Foundation.</li></ul></li>
+      <li><b>Science and Research Officer</b>, ScienceKonek<br><span class="meta">Dec 2023 – present</span>
+        <ul><li>Published 20+ articles on AI/ML and IT for early-career technologists.</li></ul></li>
+      <li><b>S&amp;T Undergraduate Scholar</b>, DOST-SEI<br><span class="meta">Sep 2023 – present</span>
+        <ul><li>Tutored hundreds of aspiring scholars in reasoning and statistics across 4 review programs.</li>
+        <li>Served as officer in DOST SA CTU, CEBU, and SIETE, and as national delegate to leadership and research camps.</li></ul></li>
+    </ul>
+  </section>
+
+  <section id="awards">
+    <h2>Awards</h2>
+    <ul class="list two">
+      <li>PH100 2025 Brightest Minds Under 30</li>
+      <li>Top 6 Finalist, 2025 BPI DATA Wave Hackathon</li>
+      <li>National Champion, Kabataan Fair Pitching, 11th Philippines I Transform! Convention</li>
+      <li>2nd Best Poster Presenter, 1st Student Research Colloquium on Statistical Sciences</li>
+      <li>Champion, Podium and Poster Presentations, CebuTech Research Congress 2024</li>
+      <li>2nd Place, GREENOVATE Environmental Project Pitching Challenge</li>
+      <li>1st Place, Report It Right Data Reporting Contest, 2025 Regional CBMS Convention</li>
+      <li>3rd Place, CTU Blockchain Ideathon</li>
+      <li>Primus Trailer Award, 8th TRAIL Leaders Camp</li>
+      <li>Dean’s Lister and Student Excellence Award, AY 2023–2024</li>
+      <li>National Finalist, LIKHA Mathematical and Computational Science Research, NSTF 2022</li>
+      <li>Champion, Premier Sci-Tech Olympiad, FSTLP CTU Main</li>
+    </ul>
+    <details class="more-awards">
+      <summary>Statistics Month and quiz bowl results</summary>
+      <p>Across the 34th, 35th, and 36th National Statistics Month at CTU: champion in Kwentong Stats essay writing and the Statistical Survey Making Contest, plus runner-up finishes in Project EXCELlence. Also champion, DOST SA CTU Battle of Wit and Wisdom, and 2nd runner-up in the Math-Stat Quizzard Intercollegiate Quiz Bowl at UP Cebu.</p>
+    </details>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>I’m open to research collaborations, speaking invitations, and conversations about spatial statistics and student research. Write to <a href="mailto:johnrowenmiano@gmail.com">johnrowenmiano@gmail.com</a>.</p>
+  </section>
+
+  <footer>© <span id="yr"></span> John Rowen Miano · Cebu, Philippines</footer>
+  </main>
+</div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  var r=document.documentElement;
+  document.getElementById('theme').addEventListener('click',function(){
+    var dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+    r.dataset.theme=dark?'light':'dark';
+  });
+  /* Highlight the nav link for the section in view */
+  var links=[].slice.call(document.querySelectorAll('.bar nav a'));
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting)links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})});
+  },{rootMargin:'-20% 0px -70% 0px'});
+  document.querySelectorAll('main section').forEach(function(s){io.observe(s)});
+})();
+</script>
+</body>
+</html>
