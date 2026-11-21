@@ -77,6 +77,16 @@ main p{max-width:44rem;margin:.6rem 0}
 @media(max-width:44rem){.two{columns:1}}
 details.more-awards{margin-top:1rem;max-width:44rem}
 details.more-awards summary{cursor:pointer;font-weight:600}
+.award-group{border-bottom:1px solid var(--line);max-width:48rem}
+.award-group summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0;font:400 1.35rem/1.3 var(--serif)}
+.award-group summary::-webkit-details-marker{display:none}
+.award-group summary::after{content:"+";font:400 1.6rem/1 var(--sans)}
+.award-group[open] summary::after{content:"\2013"}
+.award-group .count{font:400 .9rem var(--sans);color:var(--muted);margin-left:.4rem}
+.award-group .awards{padding-bottom:1rem}
+.awards{list-style:none;margin:0;padding:0;max-width:48rem}
+.awards li{padding:.55rem 0;border-bottom:1px solid var(--line);font-size:.98rem}
+.awards li:last-child{border-bottom:0}
 footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;padding:1.5rem 0;text-align:center}
 </style>
 </head>
@@ -123,7 +133,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;paddi
 
   <section id="research">
     <h2>Featured research</h2>
-    <p class="meta">Research projects I've done in my undergraduate years</p>
+    <p class="meta">Research projects I’ve done in my undergraduate years</p>
     <div class="cards">
       <article class="card"><div class="fig">VIIRS + Sentinel-2</div><div class="body">
         <h3>Mapping the Nocturnal City</h3>
@@ -211,23 +221,73 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;paddi
 
   <section id="awards">
     <h2>Awards</h2>
-    <ul class="list two">
-      <li>PH100 2025 Brightest Minds Under 30</li>
-      <li>Top 6 Finalist, 2025 BPI DATA Wave Hackathon</li>
-      <li>National Champion, Kabataan Fair Pitching, 11th Philippines I Transform! Convention</li>
-      <li>2nd Best Poster Presenter, 1st Student Research Colloquium on Statistical Sciences</li>
-      <li>Champion, Podium and Poster Presentations, CebuTech Research Congress 2024</li>
-      <li>2nd Place, GREENOVATE Environmental Project Pitching Challenge</li>
-      <li>1st Place, Report It Right Data Reporting Contest, 2025 Regional CBMS Convention</li>
-      <li>3rd Place, CTU Blockchain Ideathon</li>
-      <li>Primus Trailer Award, 8th TRAIL Leaders Camp</li>
-      <li>Dean’s Lister and Student Excellence Award, AY 2023–2024</li>
-      <li>National Finalist, LIKHA Mathematical and Computational Science Research, NSTF 2022</li>
-      <li>Champion, Premier Sci-Tech Olympiad, FSTLP CTU Main</li>
-    </ul>
-    <details class="more-awards">
-      <summary>Statistics Month and quiz bowl results</summary>
-      <p>Across the 34th, 35th, and 36th National Statistics Month at CTU: champion in Kwentong Stats essay writing and the Statistical Survey Making Contest, plus runner-up finishes in Project EXCELlence. Also champion, DOST SA CTU Battle of Wit and Wisdom, and 2nd runner-up in the Math-Stat Quizzard Intercollegiate Quiz Bowl at UP Cebu.</p>
+    <details class="award-group">
+      <summary><span>Research &amp; Innovation Awards <span class="count">(16)</span></span></summary>
+      <ul class="awards">
+        <li>2nd Place, GREENOVATE: The Environmental Project Pitching Challenge</li>
+        <li>Delegate, DOST-SEI 2025 Scholars Research Camp</li>
+        <li>Top 6 Finalist, 2025 BPI DATA Wave Hackathon (Digitalization Track)</li>
+        <li>2nd Best Poster Presenter, 1st Student Research Colloquium on Statistical Sciences – UP Cebu &amp; PSA Central Visayas</li>
+        <li>National Champion, Kabataan Fair Pitching – 11th Philippines I Transform! Convention, YouthLead Philippines</li>
+        <li>Champion, Podium Presentations – CebuTech Research Congress 2024</li>
+        <li>Champion, Poster Presentations – CebuTech Research Congress 2024</li>
+        <li>3rd Place, CTU Blockchain Ideathon – Google Developer Student Clubs CTU</li>
+        <li>Champion, Premier Sci-Tech Olympiad – Future Science and Technology Leaders of the Philippines CTU Main Campus</li>
+        <li>Semi-Finalist, Solve: Solutions Challenge Visayas – Google Developer Student Clubs Visayas</li>
+        <li>Regional Finalist, SIBOL High Category – ClusteRICE, DOST-TAPI</li>
+        <li>Best Research Presenter – Babag NHS 4th Research Congress</li>
+        <li>3rd Place, TUKLAS Life Science Research – Division Science &amp; Technology Fair (DSTF) 2023</li>
+        <li>1st Place, TUKLAS Life Science Research – District Science &amp; Technology Fair (DSTF) 2023</li>
+        <li>National Finalist, LIKHA Mathematical &amp; Computational Science Research – National Science and Technology Fair (NSTF) 2022</li>
+        <li>1st Place, LIKHA Mathematical &amp; Computational Science Research – Regional Science and Technology Fair (RSTF) 2022</li>
+      </ul>
+    </details>
+    <details class="award-group">
+      <summary><span>Leadership &amp; Advocacy Awards <span class="count">(11)</span></span></summary>
+      <ul class="awards">
+        <li>PH100 2025 Brightest Minds Under 30</li>
+        <li>Primus Trailer Award – 8th TRAIL Leaders Camp, YouthLead Philippines</li>
+        <li>Delegate, 8th TRAIL Leaders Camp – YouthLead Philippines</li>
+        <li>Delegate, 11th Philippines I Transform! Leaders’ Convention (PITLC) – YouthLead Philippines</li>
+        <li>Delegate, DOST-SEI 2nd National Patriot Scholars Congress (NPSC)</li>
+        <li>Delegate, DOST-SEI 2024 Scholars’ Leadership Camp (Region VII &amp; VIII)</li>
+        <li>Member, Research Committee – DOST SA SIETE</li>
+        <li>Committee Secretary, Education and Research – DOST SA CEBU</li>
+        <li>Public Information Officer – DOST SA CTU</li>
+        <li>Delegate, FOI Training of Trainers for Youth – FOI Philippines</li>
+        <li>Delegate, TechnoDays 2024 – Bohol Island State University-Clarin Campus</li>
+      </ul>
+    </details>
+    <details class="award-group">
+      <summary><span>Academic Excellence &amp; Scholar Distinctions <span class="count">(3)</span></span></summary>
+      <ul class="awards">
+        <li>Dean’s Lister Award – First Semester, AY 2023–2024</li>
+        <li>Student Excellence Award – First Semester, AY 2023–2024</li>
+        <li>DOST-SEI S&amp;T Scholar – Department of Science and Technology Science Education Institute</li>
+      </ul>
+    </details>
+    <details class="award-group">
+      <summary><span>Statistics &amp; Quiz Competitions <span class="count">(18)</span></span></summary>
+      <ul class="awards">
+        <li>Champion, Kwentong Stats Essay Writing Competition, 36th National Statistics Month, CTU</li>
+        <li>1st Runner-Up, Project EXCELlence – 36th National Statistics Month, CTU</li>
+        <li>2nd Runner-Up, Statistical Survey Making Contest – 36th National Statistics Month, CTU</li>
+        <li>2nd Place, Kwentong Stats Essay Writing Competition, 36th National Statistics Month Intercollegiate Competitions</li>
+        <li>1st Place, Report It Right: The Data Reporting Contest, 2025 Regional CBMS Convention and Data Festival</li>
+        <li>2nd Runner-Up, Project EXCELlence – 35th National Statistics Month, CTU</li>
+        <li>Champion, Kwentong Stats Essay Making Competition – 35th National Statistics Month, CTU</li>
+        <li>Champion, Statistical Survey Making Contest – 35th National Statistics Month, CTU</li>
+        <li>2nd Runner-Up, Math-Stat Quizzard Intercollegiate Quiz Bowl – UP Cebu</li>
+        <li>2nd Runner-Up, DOST SA CEBU Panem Quest Quiz Bowl</li>
+        <li>Champion, DOST SA CTU Battle of Wit and Wisdom Quiz Bowl</li>
+        <li>2nd Runner-Up, Project EXCELlence – 34th National Statistics Month, CTU</li>
+        <li>1st Runner-Up, Kwentong Stats Essay Making Competition – 34th National Statistics Month, CTU</li>
+        <li>Champion, Statistical Survey Making Contest – 34th National Statistics Month, CTU</li>
+        <li>Provincial Finalist, Philippine Statistical Quiz – PSA Region VII</li>
+        <li>2nd Place, Statistical Battle Royale – 34th National Statistics Month, CTU</li>
+        <li>2nd Place, Essay Writing – 34th National Statistics Month, CTU</li>
+        <li>1st Runner-Up, Institutional Philippine Statistical Quiz – CTU</li>
+      </ul>
     </details>
   </section>
 
