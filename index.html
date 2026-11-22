@@ -40,12 +40,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .page{max-width:70rem;margin:0 auto;padding:2.5rem 1.5rem 3rem;display:grid;grid-template-columns:15rem minmax(0,1fr);gap:3.5rem}
 @media(max-width:52rem){.page{grid-template-columns:1fr;gap:2rem}}
 
-.side{position:sticky;top:5.25rem;align-self:start;font-size:.97rem}
+.side{position:sticky;top:5.25rem;align-self:start;font-size:.97rem;text-align:center}
 @media(max-width:52rem){.side{position:static}}
-.photo{width:11rem;height:11rem;border-radius:50%;background:var(--navy);color:var(--light);display:grid;place-items:center;font:400 3rem var(--serif);overflow:hidden;border:3px solid var(--gold)}
+.photo{width:11rem;height:11rem;border-radius:50%;background:var(--navy);color:var(--light);display:grid;place-items:center;font:400 3rem var(--serif);overflow:hidden;border:3px solid var(--gold);margin:0 auto}
 .photo img{width:100%;height:100%;object-fit:cover}
 .side h1{font:400 1.5rem/1.2 var(--serif);margin:1.1rem 0 .15rem}
-.side .role{margin:0 0 .5rem;color:var(--muted)}
+.side .role{margin:0 0 .75rem;color:var(--muted)}
 .side ul{list-style:none;margin:0;padding:0}
 .side li{padding:.28rem 0}
 .side details{margin-top:.5rem}
@@ -58,7 +58,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .links a::after{content:"\2197";opacity:.6}
 .links a.mail::after{content:"@"}
 .links a:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
-@media(max-width:52rem){.links{flex-direction:row;flex-wrap:wrap}}
+@media(max-width:52rem){.links{flex-direction:row;flex-wrap:wrap;justify-content:center}}
 .view{display:none}
 .view.on{display:block}
 body:not([data-view="home"]) .page{grid-template-columns:minmax(0,1fr)}
@@ -132,8 +132,8 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;paddi
   <aside class="side">
     <div class="photo"><img src="assets/rowen.png" alt="John Rowen Miano"></div>
     <h1>John Rowen Miano</h1>
-    <p class="role">BS Statistics student<br>Cebu Technological University<br>DOST-SEI scholar</p>
-    <p class="loc">Cebu, Philippines</p>
+    <p class="role">BS Statistics<br>Cebu Technological University</p>
+    <p class="role">DOST-SEI S&amp;T Scholar</p>
     <nav class="links" aria-label="Profiles and contact">
       <a class="mail" href="mailto:johnrowenmiano@gmail.com">Email</a>
       <a href="https://www.linkedin.com/in/johnrowenmiano/">LinkedIn</a>
