@@ -64,10 +64,10 @@ body:not([data-view="home"]) .page{grid-template-columns:minmax(0,1fr)}
 body:not([data-view="home"]) .side{display:none}
 body:not([data-view="home"]) main{max-width:54rem}
 main h2.sub{margin-top:2.5rem}
-.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));gap:1rem;margin-top:1.25rem}
-.shot{margin:0}
-.shot .ph{aspect-ratio:4/3;border-radius:.4rem;overflow:hidden;display:grid;place-items:center;color:#f8f9fa;font-size:.85rem;background:var(--navy) radial-gradient(circle,#f8f9fa55 1px,transparent 1.5px) 0 0/14px 14px}
-.shot .ph img{width:100%;height:100%;object-fit:cover}
+.shots{columns:13rem 3;column-gap:1rem;margin-top:1.25rem}
+.shot{margin:0 0 1.25rem;break-inside:avoid}
+.shot .ph{border-radius:.4rem;overflow:hidden;background:var(--line)}
+.shot .ph img{display:block;width:100%;height:auto;max-height:26rem;object-fit:cover}
 .shot figcaption{margin-top:.5rem;font-size:.92rem;color:var(--muted);line-height:1.4}
 main h3.yr{font:400 1.35rem/1.3 var(--serif);margin:1.5rem 0 .25rem}
 /* Content */
@@ -150,12 +150,12 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;paddi
     <p>I am a BS Statistics student at Cebu Technological University and a DOST-SEI scholar, working at the intersection of statistics and geospatial analytics to turn data into insights for real-world challenges. I am currently a Principal Investigator and Research Grantee at WTA Labs: Center for Urban Research, developing a VIIRS-Sentinel-2 fusion model for nocturnal urban land use classification across Metro Cebu. Beyond research, I lead student communities and organize programs that make science more accessible, collaborative, and impactful.</p>
     <h2 class="sub">Highlights</h2>
     <div class="shots">
-      <figure class="shot"><div class="ph"><img src="assets/wta1.jpg" alt="Research grant announcement for Mapping the Nocturnal City" loading="lazy"></div><figcaption>Secured a 2026 research grant from WTA Labs for the Mapping the Nocturnal City study</figcaption></figure>
-      <figure class="shot"><div class="ph"><img src="assets/2ndsrcss.jfif" alt="Poster presentation at the 2nd Student Research Colloquium on the Statistical Sciences" loading="lazy"></div><figcaption>Presented a poster on the Geeta Distribution at the 2nd Student Research Colloquium on the Statistical Sciences, UP Cebu</figcaption></figure>
-      <figure class="shot"><div class="ph"><img src="assets/1stsrcss.jfif" alt="Receiving the 2nd Best Poster Presenter award at UP Cebu" loading="lazy"></div><figcaption>2nd Best Poster Presenter at the 1st Student Research Colloquium on the Statistical Sciences, UP Cebu</figcaption></figure>
-      <figure class="shot"><div class="ph"><img src="assets/npsc.jfif" alt="At the 2nd National Patriot Scholars Congress in Baguio City" loading="lazy"></div><figcaption>2nd National Patriot Scholars Congress at Camp John Hay, Baguio City (Sep 2024)</figcaption></figure>
-      <figure class="shot"><div class="ph"><img src="assets/pitlc1.jfif" alt="Winning the Kabataan Fair Pitching at the 11th Philippines I Transform! Leaders’ Convention" loading="lazy"></div><figcaption>National Champion at the Kabataan Fair Pitching with Rhizone, a mangrove-inspired erosion control structure (Nov 2024)</figcaption></figure>
-      <figure class="shot"><div class="ph"><img src="assets/src1.jpg" alt="Scholars from Region 7 at the DOST-SEI Scholars Research Camp" loading="lazy"></div><figcaption>DOST-SEI’s first Scholars Research Camp in Calamba, Laguna (Dec 2025)</figcaption></figure>
+      <figure class="shot"><div class="ph"><img src="assets/wta1.jpg" alt="Research grant announcement for Mapping the Nocturnal City"></div><figcaption>Secured a 2026 research grant from WTA Labs for the Mapping the Nocturnal City study</figcaption></figure>
+      <figure class="shot"><div class="ph"><img src="assets/2ndsrcss.jfif" alt="Poster presentation at the 2nd Student Research Colloquium on the Statistical Sciences"></div><figcaption>Presented a poster on the Geeta Distribution at the 2nd Student Research Colloquium on the Statistical Sciences, UP Cebu</figcaption></figure>
+      <figure class="shot"><div class="ph"><img src="assets/1stsrcss.jfif" alt="Receiving the 2nd Best Poster Presenter award at UP Cebu"></div><figcaption>2nd Best Poster Presenter at the 1st Student Research Colloquium on the Statistical Sciences, UP Cebu</figcaption></figure>
+      <figure class="shot"><div class="ph"><img src="assets/npsc.jfif" alt="At the 2nd National Patriot Scholars Congress in Baguio City"></div><figcaption>2nd National Patriot Scholars Congress at Camp John Hay, Baguio City (Sep 2024)</figcaption></figure>
+      <figure class="shot"><div class="ph"><img src="assets/pitlc1.jfif" alt="Winning the Kabataan Fair Pitching at the 11th Philippines I Transform! Leaders’ Convention"></div><figcaption>National Champion at the Kabataan Fair Pitching with Rhizone, a mangrove-inspired erosion control structure (Nov 2024)</figcaption></figure>
+      <figure class="shot"><div class="ph"><img src="assets/src1.jpg" alt="Scholars from Region 7 at the DOST-SEI Scholars Research Camp"></div><figcaption>DOST-SEI’s first Scholars Research Camp in Calamba, Laguna (Dec 2025)</figcaption></figure>
     </div>
   </section>
 
