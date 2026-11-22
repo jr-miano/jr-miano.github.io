@@ -11,7 +11,7 @@
 
 <style>
 :root{
-  --light:#f8f9fa; --navy:#1e354a;
+  --light:#f8f9fa; --navy:#1e354a; --gold:#c9a227;
   --bg:var(--light); --ink:var(--navy); --card:#fff;
   --muted:#52677a; --line:#d5dbe1; --bar:var(--navy); --bar-ink:var(--light);
   --serif:Marcellus,Georgia,serif; --sans:Poppins,system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -31,6 +31,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .bar .in{max-width:70rem;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;gap:1.25rem;min-height:3.25rem;flex-wrap:wrap}
 .bar a{text-decoration:none;font-size:.95rem;opacity:.85}
 .bar a:hover,.bar a.on{opacity:1;text-decoration:underline}
+.bar a.on{color:var(--gold)}
 .bar .brand{font:400 1.15rem var(--serif);opacity:1;margin-right:auto}
 .bar nav{display:flex;gap:1.1rem;flex-wrap:wrap}
 #theme{background:none;border:1px solid #ffffff66;color:inherit;border-radius:2rem;padding:.15rem .7rem;font:inherit;font-size:.82rem;cursor:pointer}
@@ -41,7 +42,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 
 .side{position:sticky;top:5.25rem;align-self:start;font-size:.97rem}
 @media(max-width:52rem){.side{position:static}}
-.photo{width:11rem;height:11rem;border-radius:50%;background:var(--navy);color:var(--light);display:grid;place-items:center;font:400 3rem var(--serif);overflow:hidden;border:3px solid var(--ink)}
+.photo{width:11rem;height:11rem;border-radius:50%;background:var(--navy);color:var(--light);display:grid;place-items:center;font:400 3rem var(--serif);overflow:hidden;border:3px solid var(--gold)}
 .photo img{width:100%;height:100%;object-fit:cover}
 .side h1{font:400 1.5rem/1.2 var(--serif);margin:1.1rem 0 .15rem}
 .side .role{margin:0 0 .5rem;color:var(--muted)}
@@ -56,7 +57,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .links a{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.5rem .9rem;border:1px solid var(--ink);border-radius:.4rem;text-decoration:none;font-weight:500;font-size:.93rem;transition:background .15s,color .15s}
 .links a::after{content:"\2197";opacity:.6}
 .links a.mail::after{content:"@"}
-.links a:hover{background:var(--ink);color:var(--bg)}
+.links a:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
 @media(max-width:52rem){.links{flex-direction:row;flex-wrap:wrap}}
 .view{display:none}
 .view.on{display:block}
@@ -72,7 +73,8 @@ main h2.sub{margin-top:2.5rem}
 main h3.yr{font:400 1.35rem/1.3 var(--serif);margin:1.5rem 0 .25rem}
 /* Content */
 main section{padding-bottom:2.75rem}
-main h2{font:400 2rem/1.2 var(--serif);margin:0 0 1rem;padding-bottom:.4rem;border-bottom:2px solid var(--ink)}
+main h2{font:400 2rem/1.2 var(--serif);margin:0 0 1rem;padding-bottom:.4rem;border-bottom:1px solid var(--line);position:relative}
+main h2::after{content:"";position:absolute;left:0;bottom:-1px;width:4rem;height:3px;background:var(--gold)}
 main p{margin:.6rem 0}
 .meta{color:var(--muted);font-size:.93rem}
 
@@ -92,7 +94,7 @@ main p{margin:.6rem 0}
 .list ul{margin:.45rem 0 0;padding-left:1.1rem}
 .list ul li{margin:.2rem 0}
 .list .grp>.org{font:400 1.2rem/1.3 var(--serif)}
-.list ul.roles{list-style:none;margin:.6rem 0 0;padding:0 0 0 .9rem;border-left:2px solid var(--line)}
+.list ul.roles{list-style:none;margin:.6rem 0 0;padding:0 0 0 .9rem;border-left:2px solid var(--gold)}
 .list ul.roles>li{padding:.55rem 0 .55rem .6rem;border:0;margin:0}
 .list ul.roles ul{list-style:disc}
 .two{columns:2;column-gap:2.5rem;max-width:none!important}
@@ -103,7 +105,7 @@ details.more-awards summary{cursor:pointer;font-weight:600}
 .award-group{border-bottom:1px solid var(--line);max-width:48rem}
 .award-group summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0;font:400 1.35rem/1.3 var(--serif)}
 .award-group summary::-webkit-details-marker{display:none}
-.award-group summary::after{content:"+";font:400 1.6rem/1 var(--sans)}
+.award-group summary::after{content:"+";font:400 1.6rem/1 var(--sans);color:var(--gold)}
 .award-group[open] summary::after{content:"\2013"}
 .award-group .count{font:400 .9rem var(--sans);color:var(--muted);margin-left:.4rem}
 .award-group .awards{padding-bottom:1rem}
@@ -146,7 +148,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;paddi
   <main>
 
   <section id="home" class="view">
-    <h2>Welcome to my caffeine-induced curiosities.</h2>
+    <h2>Welcome to my caffeine-induced curiosities...</h2>
     <p>Hello! I am Rowen, a BS Statistics student at Cebu Technological University and a DOST-SEI scholar. I am currently working at the intersection of statistics and geospatial analytics to turn data into insights for real-world challenges. I am currently a Principal Investigator (Research Grantee) at WTA Labs: Center for Urban Research, developing a VIIRS-Sentinel-2 fusion model for nocturnal urban land use classification across Metro Cebu. Beyond research, I lead student communities and organize programs that make science more accessible, collaborative, and impactful.</p>
     <h2 class="sub">Highlights</h2>
     <div class="shots">
