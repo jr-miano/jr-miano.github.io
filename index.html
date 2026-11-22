@@ -73,8 +73,9 @@ main h2.sub{margin-top:2.5rem}
 main h3.yr{font:400 1.35rem/1.3 var(--serif);margin:1.5rem 0 .25rem}
 /* Content */
 main section{padding-bottom:2.75rem}
-main h2{font:400 2rem/1.2 var(--serif);margin:0 0 1rem;padding-bottom:.4rem;border-bottom:1px solid var(--line);position:relative}
-main h2::after{content:"";position:absolute;left:0;bottom:-1px;width:4rem;height:3px;background:var(--gold)}
+main h2{font:400 2rem/1.2 var(--serif);margin:0 0 1rem;border-bottom:1px solid var(--line)}
+main h2>span{display:block;width:fit-content;max-width:100%;position:relative;padding-bottom:.4rem}
+main h2>span::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--gold)}
 main p{margin:.6rem 0}
 .meta{color:var(--muted);font-size:.93rem}
 
@@ -148,9 +149,9 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;paddi
   <main>
 
   <section id="home" class="view">
-    <h2>Welcome to my caffeine-induced curiosities...</h2>
+    <h2><span>Welcome to my caffeine-induced curiosities...</span></h2>
     <p>Hello! I am Rowen, a BS Statistics student at Cebu Technological University and a DOST-SEI scholar. I am currently working at the intersection of statistics and geospatial analytics to turn data into insights for real-world challenges. I am currently a Principal Investigator (Research Grantee) at WTA Labs: Center for Urban Research, developing a VIIRS-Sentinel-2 fusion model for nocturnal urban land use classification across Metro Cebu. Beyond research, I lead student communities and organize programs that make science more accessible, collaborative, and impactful.</p>
-    <h2 class="sub">Highlights</h2>
+    <h2 class="sub"><span>Highlights</span></h2>
     <div class="shots">
       <figure class="shot"><div class="ph"><img src="assets/wta1.jpg" alt="Research grant announcement for Mapping the Nocturnal City"></div><figcaption>Secured a 2026 research grant from WTA Labs for the Mapping the Nocturnal City study</figcaption></figure>
       <figure class="shot"><div class="ph"><img src="assets/2ndsrcss.jfif" alt="Poster presentation at the 2nd Student Research Colloquium on the Statistical Sciences"></div><figcaption>Presented a poster on the Geeta Distribution at the 2nd Student Research Colloquium on the Statistical Sciences, UP Cebu</figcaption></figure>
@@ -162,7 +163,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;paddi
   </section>
 
   <section id="research" class="view">
-    <h2>Featured research</h2>
+    <h2><span>Featured research</span></h2>
     <p class="meta">Research projects I’ve done in my undergraduate years</p>
     <div class="cards">
       <article class="card"><div class="fig">Nighttime Lights + Land Use</div><div class="body">
@@ -194,7 +195,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;paddi
   </section>
 
   <section id="publications" class="view">
-    <h2>Publications and grants</h2>
+    <h2><span>Publications and grants</span></h2>
     <ul class="list">
       <li><b>Revealing Land Use Dynamics in Armed-Conflict Hotspots in North-East Nigeria Using Earth Observation Data</b><br>
         <span class="meta">Land Use Policy Journal, June 2025 · <a href="https://doi.org/10.1016/j.landusepol.2025.107673">doi.org/10.1016/j.landusepol.2025.107673</a></span></li>
@@ -204,7 +205,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;paddi
   </section>
 
   <section id="talks" class="view">
-    <h2>Talks and posters</h2>
+    <h2><span>Talks and posters</span></h2>
     <ul class="list">
       <li><b>Gaussian Process Regression for Reconstructing Satellite-Derived Chlorophyll-a in Laguna de Bay</b><br><span class="meta">Poster · 6th International Electronic Conference on Remote Sensing</span></li>
       <li><b>On the Likelihood and Identifiability of the Geeta Distribution</b><br><span class="meta">Poster · 2nd Student Research Colloquium on the Statistical Sciences, UP Cebu</span></li>
@@ -219,7 +220,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;paddi
   </section>
 
   <section id="experience" class="view">
-    <h2>Experience</h2>
+    <h2><span>Experience</span></h2>
     <ul class="list">
       <li class="grp"><b class="org">SEDS Philippines</b>
         <ul class="roles">
@@ -268,7 +269,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;paddi
   </section>
 
   <section id="awards" class="view">
-    <h2>Awards</h2>
+    <h2><span>Awards</span></h2>
     <details class="award-group">
       <summary><span>Research &amp; Innovation Awards <span class="count">(16)</span></span></summary>
       <ul class="awards">
@@ -340,7 +341,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;paddi
   </section>
 
   <section id="news" class="view">
-    <h2>In the News</h2>
+    <h2><span>In the News</span></h2>
     <p>Features about my work and the initiatives I lead, as published by Cebu Technological University.</p>
     <h3 class="yr">2026</h3>
     <ul class="list">
@@ -363,7 +364,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;paddi
   </section>
 
   <section id="sapereus" class="view">
-    <h2>Sapereus</h2>
+    <h2><span>Sapereus</span></h2>
     <p class="meta">Director · Dec 2024 – present</p>
     <p>Sapereus is my passion and purpose project, and the home for my research initiatives. Through it, I advise other student researchers, build data-driven projects, and teach the skills I’ve learned along the way.</p>
     <ul class="list">
@@ -375,7 +376,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;paddi
   </section>
 
   <section id="contact" class="view">
-    <h2>Contact</h2>
+    <h2><span>Contact</span></h2>
     <p>I’m open to research collaborations, speaking invitations, and conversations about student research and science communication. Write to <a href="mailto:johnrowenmiano@gmail.com">johnrowenmiano@gmail.com</a>.</p>
   </section>
 
