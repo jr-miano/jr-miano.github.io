@@ -37,6 +37,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .bar .brand{font:400 1.15rem var(--serif);opacity:1;margin-right:auto}
 .bar nav{display:flex;gap:1.1rem;flex-wrap:wrap}
 #theme{background:none;border:1px solid #ffffff66;color:inherit;border-radius:2rem;padding:.15rem .7rem;font:inherit;font-size:.82rem;cursor:pointer}
+@media(max-width:52rem){
+  .bar{position:static}
+  .bar .in{flex-direction:column;align-items:center;gap:.5rem;padding-top:.75rem;padding-bottom:.75rem;text-align:center}
+  .bar .brand{margin-right:0}
+  .bar nav{justify-content:center;gap:.35rem 1.1rem}
+  .bar a{font-size:.9rem}
+}
 
 /* Layout: sidebar + content */
 .page{max-width:70rem;margin:0 auto;padding:2.5rem 1.5rem 3rem;display:grid;grid-template-columns:15rem minmax(0,1fr);gap:3.5rem}
