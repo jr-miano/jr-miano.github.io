@@ -90,6 +90,8 @@ main p{margin:.6rem 0}
 .card{background:var(--card);border:1px solid var(--line);border-radius:.4rem;overflow:hidden;display:flex;flex-direction:column}
 /* Figure area: swap the background for <img> when you have a figure */
 .fig{height:7.5rem;background:var(--navy) radial-gradient(circle,#f8f9fa55 1px,transparent 1.5px) 0 0/14px 14px;display:flex;align-items:flex-end;padding:.6rem .8rem;color:#f8f9fa;font-size:.8rem}
+.fig.has-img{height:10rem;padding:0;background:var(--line)}
+.fig.has-img img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top}
 .card .body{padding:1rem 1rem 1.15rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
 .card h3{font:600 1.05rem/1.35 var(--sans);margin:0}
 .card p{margin:0;font-size:.96rem;line-height:1.55}
@@ -177,11 +179,11 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;paddi
     <h2><span>Projects</span></h2>
     <p class="meta">Projects (research and initiatives) I’ve done in my undergraduate years</p>
     <div class="cards">
-      <article class="card"><div class="fig">Nighttime Lights + Land Use</div><div class="body">
+      <article class="card"><div class="fig has-img"><img src="assets/wta1.jpg" alt="WTA Labs research grant announcement for Mapping the Nocturnal City"></div><div class="body">
         <h3>Mapping the Nocturnal City</h3>
         <p>As principal investigator of a WTA Labs grant, I’m detecting BPO clusters and measuring commute inequality in Metro Cebu, then checking the results with the community.</p>
       </div></article>
-      <article class="card"><div class="fig">Land Use Dynamics</div><div class="body">
+      <article class="card"><div class="fig has-img"><img src="assets/lupj.png" alt="Land Use Policy journal article on land use dynamics in armed-conflict hotspots in North-East Nigeria"></div><div class="body">
         <h3>Land Dynamics from Armed-Conflicts</h3>
         <p>We tracked land use change across North-East Nigeria with satellite data and published the findings in Land Use Policy.</p>
         <a class="more" href="https://doi.org/10.1016/j.landusepol.2025.107673">Read the paper</a>
